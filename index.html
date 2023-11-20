@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Trenitalia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Trenitalia</title>
 </head>
+
 <body>
-    <!-- <h1>CIUF CIUF CIUF CIUF</h1>
-    <div class="container">
-        <h1>Costo biglietto:</h1>
-        <span id="costo_biglietto"></span>
-        <span id="euro">&#8364;</span>
-    </div> -->
-    <input type="text" id="chilometri">Chilometri
-    <input type="text" id="etauser">eta'
-    <button id="ricevitore">Vai</button>
-    <script type="text/javascript" src="js/script.js"></script>
+  <div class="container-fluid text-center mt-5">
+    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <form class="row g-3 justify-content-center align-items-center text-white" id="main_form">
+      <div class="col-auto">
+        <label class="pb-2">Nome e cognome</label>
+        <input type="text" class="form-control" id="user_name_surName" placeholder="Inserisci il tuo nome e cognome">
+      </div>
+      <div class="col-auto">
+        <label class="pb-2">Km da Percorrere</label>
+        <input type="number" class="form-control" id="chilometri">
+      </div>
+      <div class="col-auto">
+        <label class="pb-2">Fascia d&apos;et&agrave;</label>
+        <select class="form-select" id="form_group">
+          <option selected></option>
+          <option value="1">Minorenne</option>
+          <option value="2">Maggiorenne</option>
+          <option value="3">Anziano</option>
+        </select>
+      </div>
+      <div class="col-12 ">
+        <a class="btn btn-primary mb-3" id="ricevitore">Genera</a>
+        <input type="button" id="reset_button" class="btn btn-primary mb-3" value="Annulla">
+
+      </div>
+    </form>
+    <div class="container-fluid bg-fluid width60 bg-white">
+      <div class="row">
+        <div class="col-3">
+          <div class="mx-auto text-start">
+            <h3 class="font_size_ticket_title">NOME PASSEGGERO</h3>
+            <span class="test-start" id="nome_cognome">asdasd</span>
+          </div>
+
+        </div>
+        <div class="col-9">
+
+        </div>
+      </div>
+    </div>
+    <!-- <input type="text" id="chilometri">Chilometri
+        <input type="text" id="etauser">eta'
+        <button id="ricevitore">Vai</button> -->
+  </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>

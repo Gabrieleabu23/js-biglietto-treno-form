@@ -12,32 +12,34 @@
 
 <body>
   <div class="container-fluid text-center mt-5">
-    <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-    <form class="row g-3 justify-content-center align-items-center text-white" id="main_form">
-      <div class="col-auto">
-        <label class="pb-2">Nome e cognome</label>
-        <input type="text" class="form-control" id="user_name_surName" placeholder="Inserisci il tuo nome e cognome">
-      </div>
-      <div class="col-auto">
-        <label class="pb-2">Km da Percorrere</label>
-        <input type="number" class="form-control" id="chilometri">
-      </div>
-      <div class="col-auto">
-        <label class="pb-2">Fascia d&apos;et&agrave;</label>
-        <select class="form-select" id="form_group">
-          <option selected></option>
-          <option value="1">Minorenne</option>
-          <option value="2">Maggiorenne</option>
-          <option value="3">Anziano</option>
-        </select>
-      </div>
-      <div class="col-12 ">
-        <a class="btn btn-primary mb-3" id="ricevitore">Genera</a>
-        <input type="button" id="reset_button" class="btn btn-primary mb-3" value="Annulla">
-
-      </div>
-    </form>
-    <div class="container-fluid bg-fluid width60 bg-white d-none">
+    <h2 class="text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+    <div class="d-flex justify-content-center">
+      <form class="row g-3 justify-content-center align-items-center bg-white mt-4 p-4 rounded-1 mb-4" id="main_form">
+        <div class="col-auto">
+          <label class="pb-2">Nome e cognome</label>
+          <input type="text" class="form-control" id="user_name_surName" placeholder="Inserisci il tuo nome e cognome">
+        </div>
+        <div class="col-auto">
+          <label class="pb-2">Km da Percorrere</label>
+          <input type="number" class="form-control" id="chilometri">
+        </div>
+        <div class="col-auto">
+          <label class="pb-2">Fascia d&apos;et&agrave;</label>
+          <select class="form-select" id="form_group">
+            <option selected></option>
+            <option value="1">Minorenne</option>
+            <option value="2">Maggiorenne</option>
+            <option value="3">Anziano</option>
+          </select>
+        </div>
+        <div class="col-12 ">
+          <a class="btn btn-primary mb-3" id="ricevitore">Genera</a>
+          <input type="button" id="reset_button" class="btn btn-primary mb-3" value="Annulla">
+        </div>
+      </form>
+    </div>
+    <h2 class="text-white ticket_title d-none">IL TUO BIGLIETTO</h2>
+    <div class="container-fluid bg-fluid width60 bg-white d-none rounded-1">
       <div class="row p-4 pe-0">
         <div class="col-3 ps-0">
           <div class="mx-auto text-start bg_grey_name_ticket p-2 h-100">
@@ -46,7 +48,7 @@
           </div>
         </div>
         <div class="col-9 ">
-              <div class="row fw-bold border-top border-dark pt-3 pb-5">
+              <div class="row fw-bold border-top border-dark pt-3 pb-5 me-3">
                 <span class="col-3 font_size_ticket_title p-0 ">Offerta</span>
                 <span class="col-3 font_size_ticket_title p-0 ">Carrozza</span>
                 <span class="col-3 font_size_ticket_title p-0">Codice CP</span>
@@ -56,7 +58,7 @@
                 <span class="col-3 font_size_ticket_title  p-0" id="type_ticket"></span>
                 <span class="col-3 font_size_ticket_title p-0 " id="coach_number">Carrozza</span>
                 <span class="col-3 font_size_ticket_title p-0" id="cp_code">Codice CP</span>
-                <span class="col-3 font_size_ticket_title p-0" id="price">Costo biglietto</span>
+                <span class="col-3 font_size_ticket_title p-0" id="price"><span>&euro;</span></span>
               </div>
         </div>
       </div>

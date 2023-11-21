@@ -25,12 +25,16 @@ document.getElementById("ricevitore").addEventListener("click",
     // IMPOSTAZIONE CODICE CP
     document.getElementById("cp_code").innerHTML=Math.floor(Math.random()*100000 + 10000);
 
+    document.getElementById("price").innerHTML=""+"€";
+
+
     if(anni === 1){
         // DEBUG
          const scount=(20/100);
         let price=ticketPrice*scount;
         const totalPrice=parseFloat((ticketPrice-price).toFixed(2));
         console.log( "prezzo finale: ",totalPrice);
+        document.getElementById("price").prepend(totalPrice);
         document.getElementById("type_ticket").innerHTML="Biglietto scontato 20%";
         // DEBUG
         // console.log(totalPrice);
@@ -41,6 +45,7 @@ document.getElementById("ricevitore").addEventListener("click",
         let price=ticketPrice*scount;
         const totalPrice=parseFloat((ticketPrice-price).toFixed(2));
         console.log( "prezzo finale: ",totalPrice);
+        document.getElementById("price").prepend(totalPrice);
         document.getElementById("type_ticket").innerHTML="Biglietto scontato 40%";
 
         // DEBUG
@@ -49,10 +54,12 @@ document.getElementById("ricevitore").addEventListener("click",
     else{
         const totalPrice=ticketPrice;
         console.log( "prezzo finale: ",totalPrice);
+        document.getElementById("price").prepend(totalPrice);
         // DEBUG
         // console.log(totalPrice);
     }
     document.querySelector(".width60").classList.remove("d-none");
+    document.querySelector(".ticket_title").classList.remove("d-none");
     document.getElementById("nome_cognome").innerHTML=name_surName;    
 }
 );
@@ -60,6 +67,7 @@ document.getElementById("ricevitore").addEventListener("click",
         function(){
             document.getElementById("main_form").reset();
             document.querySelector(".width60").classList.add("d-none");
+            document.querySelector(".ticket_title").classList.add("d-none");
         }
     )
     

@@ -12,3 +12,6 @@ body{
 .font_size_ticket_title{
     font-size: 1rem;
 }
+.bg_grey_name_ticket{
+    background-color: #808080;
+}

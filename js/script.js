@@ -17,7 +17,13 @@ document.getElementById("ricevitore").addEventListener("click",
     // MOLTIPLICHIAMO I KM DI DISTANZA CON IL PREZZO PER KM
     let ticketPrice= rangeKm*ticketKmPrice;
     // DEBUG
-    // console.log(ticketPrice);s
+    // console.log(ticketPrice);
+    // IMPOSTAZIONE INIZIALE DEL TIPO TI BIGLIETTO
+    document.getElementById("type_ticket").innerHTML="Biglietto Standard";
+    // IMPOSTAZIONE CASUALE NUMERO CARROZZA DA 1 a 9
+    document.getElementById("coach_number").innerHTML=Math.floor(Math.random()*10 +1);
+    // IMPOSTAZIONE CODICE CP
+    document.getElementById("cp_code").innerHTML=Math.floor(Math.random()*100000 + 10000);
 
     if(anni === 1){
         // DEBUG
@@ -25,6 +31,7 @@ document.getElementById("ricevitore").addEventListener("click",
         let price=ticketPrice*scount;
         const totalPrice=parseFloat((ticketPrice-price).toFixed(2));
         console.log( "prezzo finale: ",totalPrice);
+        document.getElementById("type_ticket").innerHTML="Biglietto scontato 20%";
         // DEBUG
         // console.log(totalPrice);
     }else if (anni === 3){
@@ -34,6 +41,8 @@ document.getElementById("ricevitore").addEventListener("click",
         let price=ticketPrice*scount;
         const totalPrice=parseFloat((ticketPrice-price).toFixed(2));
         console.log( "prezzo finale: ",totalPrice);
+        document.getElementById("type_ticket").innerHTML="Biglietto scontato 40%";
+
         // DEBUG
         // console.log(totalPrice);
     }

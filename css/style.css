@@ -15,3 +15,6 @@ body{
 .bg_grey_name_ticket{
     background-color: #808080;
 }
+#user_name_surName::placeholder {
+    font-size: 12px;
+  }
